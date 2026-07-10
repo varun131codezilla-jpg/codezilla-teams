@@ -1,0 +1,58 @@
+/* ============================================
+   TRUST STRIP — Scrolling Marquee
+   ============================================ */
+.trust-strip {
+  background: var(--c-dark);
+  padding: var(--sp-6) 0;
+  overflow: hidden;
+  position: relative;
+}
+.trust-strip__label {
+  text-align: center;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  padding-bottom: var(--sp-5);
+}
+.trust-strip__track {
+  display: flex; width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.trust-strip__track:hover { animation-play-state: paused; }
+.trust-strip__item {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: 0 var(--sp-10);
+  white-space: nowrap;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  color: rgba(255,255,255,0.7);
+}
+.trust-strip__item svg {
+  width: 20px; height: 20px;
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+.trust-strip__divider {
+  color: rgba(255,255,255,0.15);
+  font-size: 1.2rem;
+  padding: 0 var(--sp-2);
+}
+/* Fade edges */
+.trust-strip::before, .trust-strip::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0;
+  width: 80px; z-index: 2;
+  pointer-events: none;
+}
+.trust-strip::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--c-dark), transparent);
+}
+.trust-strip::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--c-dark), transparent);
+}

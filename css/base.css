@@ -1,0 +1,295 @@
+/* ============================================
+   BASE — Reset, Global Styles, Organic Texture
+   ============================================ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  /* Organic subtle texture overlay across all pages */
+  background-image: radial-gradient(rgba(13, 159, 110, 0.02) 1px, transparent 0), radial-gradient(rgba(217, 119, 6, 0.015) 1px, transparent 0);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul, ol { list-style: none; }
+
+input, textarea, select { font: inherit; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--c-bg-alt); }
+::-webkit-scrollbar-thumb {
+  background: var(--c-text-muted);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--c-text-secondary); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--c-primary);
+  color: white;
+}
+
+/* ── Layout ── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+/* ── Section Base ── */
+.section {
+  padding: var(--sp-24) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--warm {
+  background: var(--c-bg-warm);
+  border-top: 1px solid rgba(13, 159, 110, 0.08);
+  border-bottom: 1px solid rgba(13, 159, 110, 0.08);
+}
+
+.section--dark {
+  background: var(--grad-dark);
+  color: #FFFFFF;
+}
+
+.section--alt {
+  background: var(--c-bg-section);
+}
+
+.section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--c-primary-50);
+  border: 1px solid var(--c-primary-100);
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.section--dark .section__label {
+  background: rgba(13, 159, 110, 0.15);
+  border-color: rgba(13, 159, 110, 0.25);
+  color: var(--c-primary-light);
+}
+
+.section__title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+  color: var(--c-text);
+  margin-bottom: var(--sp-4);
+}
+
+.section--dark .section__title { color: #FFFFFF; }
+
+.section__subtitle {
+  font-size: var(--fs-body);
+  color: var(--c-text-secondary);
+  max-width: 680px;
+  line-height: var(--lh-body);
+}
+
+.section--dark .section__subtitle { color: var(--c-text-muted); }
+
+.section__header {
+  margin-bottom: var(--sp-16);
+}
+
+.section__header--center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Editorial & Quote Accents ── */
+.editorial-quote {
+  font-family: var(--ff-editorial);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  line-height: 1.45;
+  color: var(--c-dark);
+  border-left: 3px solid var(--c-accent);
+  padding-left: var(--sp-6);
+  margin: var(--sp-8) 0;
+}
+
+.editorial-pull {
+  font-family: var(--ff-editorial);
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+  color: var(--c-primary-dark);
+  font-weight: var(--fw-medium);
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+}
+
+.text-gradient {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-highlight {
+  color: var(--c-primary);
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-body-sm);
+  padding: var(--sp-4) var(--sp-8);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--c-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(13, 159, 110, 0.35);
+}
+
+.btn--primary:hover {
+  background: var(--c-primary-dark);
+  box-shadow: 0 6px 20px rgba(13, 159, 110, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--c-text);
+  border: 1.5px solid var(--c-border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+  transform: translateY(-2px);
+}
+
+.btn--dark {
+  background: var(--c-dark);
+  color: #FFFFFF;
+}
+
+.btn--dark:hover {
+  background: var(--c-dark-light);
+  transform: translateY(-2px);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--outline-light:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn--lg {
+  padding: var(--sp-5) var(--sp-10);
+  font-size: var(--fs-body);
+}
+
+.btn--sm {
+  padding: var(--sp-3) var(--sp-6);
+  font-size: var(--fs-body-sm);
+}
+
+.btn svg, .btn .btn-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover svg,
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* ── Visually Hidden ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
