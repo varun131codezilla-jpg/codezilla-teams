@@ -13,7 +13,7 @@
   padding-bottom: var(--sp-16);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.footer__brand { max-width: 300px; }
+.footer__brand { max-width: 380px; }
 .footer__brand .navbar__logo {
   margin-bottom: var(--sp-5);
 }
@@ -74,3 +74,77 @@
 }
 .footer__bottom a { color: var(--c-primary-light); }
 .footer__bottom a:hover { text-decoration: underline; }
+
+/* Footer Trust & Certifications Bar */
+.footer__trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-10);
+  margin-bottom: var(--sp-12);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.05);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.footer__trust-item svg, .footer__trust-item i {
+  width: 16px; height: 16px;
+  color: var(--c-primary-light);
+}
+
+/* Footer Legal Box */
+.footer__legal-box {
+  background: rgba(255,255,255,0.04);
+  padding: var(--sp-4);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--c-primary);
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.65);
+  margin: var(--sp-4) 0;
+}
+.footer__legal-box strong {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Footer Privacy Pledge */
+.footer__privacy-pledge {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  background: rgba(13, 159, 110, 0.12);
+  border: 1px solid rgba(13, 159, 110, 0.3);
+  padding: var(--sp-5) var(--sp-6);
+  border-radius: var(--radius-lg);
+  margin-top: var(--sp-8);
+  margin-bottom: var(--sp-8);
+  font-size: var(--fs-caption);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+.footer__privacy-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--c-primary);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.footer__privacy-icon svg, .footer__privacy-icon i {
+  width: 18px; height: 18px;
+}
+.footer__privacy-pledge strong {
+  color: #6EE7B7;
+}
+

@@ -60,3 +60,19 @@
   .final-cta { padding: var(--sp-16) 0; }
   .final-cta .btn--primary { width: 100%; }
 }
+
+/* ── New Component Breakpoints ── */
+@media (max-width: 1024px) {
+  .pricing-tier-grid { grid-template-columns: 1fr !important; max-width: 500px; margin: 0 auto; }
+  .leadership-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .sample-preview-card { grid-template-columns: 1fr !important; gap: var(--sp-8) !important; }
+  .client-badges__grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--sp-4) !important; }
+}
+
+@media (max-width: 640px) {
+  .leadership-grid { grid-template-columns: 1fr !important; }
+  .client-badges__grid { grid-template-columns: 1fr !important; }
+  .security-badge-bar { flex-direction: column !important; align-items: center !important; gap: var(--sp-3) !important; text-align: center; }
+  .comparison-table-wrapper { margin: 0 calc(-1 * var(--sp-5)); padding: 0 var(--sp-5); }
+  .comparison-table th, .comparison-table td { padding: var(--sp-3) var(--sp-4) !important; font-size: var(--fs-caption) !important; }
+}

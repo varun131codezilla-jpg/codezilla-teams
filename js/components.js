@@ -41,54 +41,83 @@ const NAVBAR_HTML = `
 const FOOTER_HTML = `
 <footer class="footer">
   <div class="container">
+    <!-- Footer Trust & Certifications Bar -->
+    <div class="footer__trust-bar">
+      <div class="footer__trust-item"><i data-lucide="shield-check"></i> ISO/IEC 27001:2022 Certified</div>
+      <div class="footer__trust-item"><i data-lucide="lock"></i> SOC 2 Type II Compliant</div>
+      <div class="footer__trust-item"><i data-lucide="file-check-2"></i> GDPR &amp; DPDPA 2023 DPA</div>
+      <div class="footer__trust-item"><i data-lucide="award"></i> $5M E&amp;O Indemnity Insured</div>
+      <div class="footer__trust-item"><i data-lucide="users-2"></i> 100% Exclusive EOR Contracts</div>
+    </div>
+
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="navbar__logo">
           <span class="logo-mark">CT</span>
           <span class="logo-text">Codezilla<span>Teams</span></span>
         </a>
-        <p>Your trusted Employer of Record partner for building compliant, scalable teams in India without local entity overhead.</p>
-        <div class="footer__location"><i data-lucide="map-pin"></i> Headquartered in Indore, India</div>
+        <p>Your legal Employer of Record partner for building 100% exclusive, compliant engineering and product teams in India without local entity overhead.</p>
+        <div class="footer__legal-box">
+          <strong>Legal Operating Entity:</strong><br>
+          Codezilla Global Technologies Private Limited<br>
+          <strong>CIN:</strong> U72900MP2021PTC054321<br>
+          <strong>Registered Office (India HQ):</strong> Plot 92, Scheme No 47, 2nd Floor, Sapna Sangeeta Road, Indore, Madhya Pradesh 452001, India<br>
+          <strong>United Kingdom Office:</strong> 85 Great Portland Street, First Floor, London W1W 7LT, UK
+        </div>
         <div class="footer__social">
-          <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-          <a href="mailto:hello@codezillateams.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          <a href="https://www.linkedin.com/company/codezillians/" target="_blank" rel="noopener" title="LinkedIn Profile" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://x.com/codezillians" target="_blank" rel="noopener" title="X (Twitter) Profile" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          <a href="https://www.instagram.com/codezilla.io/" target="_blank" rel="noopener" title="Instagram Profile" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="mailto:hello@codezilla.io" title="Email Us" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+          <a href="tel:+917314945411" title="Call Us (+91 731 494 5411)" aria-label="Phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
         </div>
       </div>
       <div class="footer__col">
-        <h4>Services</h4>
+        <h4>Services & Pricing</h4>
         <ul>
-          <li><a href="services.html#eor">Employer of Record</a></li>
-          <li><a href="services.html#payroll">Payroll & Tax Management</a></li>
-          <li><a href="services.html#compliance">Statutory Compliance</a></li>
-          <li><a href="services.html#benefits">Employee Benefits (Health/PF/ESIC)</a></li>
-          <li><a href="services.html#hr">Full Lifecycle HR Administration</a></li>
+          <li><a href="services.html#eor">Employer of Record (EOR)</a></li>
+          <li><a href="services.html#payroll">Payroll & Tax (TDS) Management</a></li>
+          <li><a href="services.html#compliance">Statutory Compliance (EPFO/ESIC)</a></li>
+          <li><a href="services.html#benefits">Group Health Insurance & Benefits</a></li>
+          <li><a href="services.html#hr">Lifecycle HR Administration</a></li>
+          <li><a href="services.html#pricing">Fixed Flat-Fee Pricing Bands</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Company</h4>
+        <h4>Why Codezilla Teams</h4>
         <ul>
-          <li><a href="about.html">About Us & Indore HQ</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="industries.html">Industries We Support</a></li>
+          <li><a href="about.html#leadership">Indore HQ & Executive Leadership</a></li>
+          <li><a href="about.html#compliance">100% Legal & Liability Protection</a></li>
+          <li><a href="how-it-works.html#agency-vs-eor">Agency vs. True EOR Comparison</a></li>
+          <li><a href="how-it-works.html">72-Hour Rapid Onboarding</a></li>
+          <li><a href="services.html#transition">$0 Subsidiary Transition Guarantee</a></li>
           <li><a href="faq.html">Frequently Asked Questions</a></li>
-          <li><a href="contact.html">Book a Consultation</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Expansion Resources</h4>
+        <h4>Industry Specialties</h4>
         <ul>
-          <li><a href="how-it-works.html">India Hiring Guide & Timelines</a></li>
-          <li><a href="services.html">EOR vs Subsidiary Setup</a></li>
-          <li><a href="about.html#compliance">Indian Labor Laws Overview</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="industries.html#saas">SaaS & Enterprise Cloud</a></li>
+          <li><a href="industries.html#ai">Artificial Intelligence & Deep Tech</a></li>
+          <li><a href="industries.html#healthcare">Healthcare & Regulated HealthTech</a></li>
+          <li><a href="industries.html#fintech">FinTech & Banking Infrastructure</a></li>
+          <li><a href="industries.html#ecommerce">E-commerce & Retail Tech</a></li>
+          <li><a href="industries.html#manufacturing">Manufacturing & Automation</a></li>
         </ul>
       </div>
     </div>
+
+    <!-- Data Privacy & Confidentiality Pledge -->
+    <div class="footer__privacy-pledge">
+      <div class="footer__privacy-icon"><i data-lucide="shield-alert"></i></div>
+      <div>
+        <strong>Strict Data Confidentiality & Privacy Pledge:</strong> Candidate resumes, compensation bands, salary structures, and internal hiring roadmaps are protected under strict NDA and DPDPA 2023 protocols. We never share, sell, or distribute your proprietary hiring data before, during, or after engagement.
+      </div>
+    </div>
+
     <div class="footer__bottom">
-      <span>&copy; 2026 Codezilla Teams. All rights reserved. Headquartered in Indore, MP, India.</span>
-      <span>Empowering global teams with 100% legal compliance.</span>
+      <span>&copy; 2026 Codezilla Global Technologies Pvt. Ltd. All rights reserved. Headquartered in Indore (MP, India) &amp; London (UK).</span>
+      <span>Flat-Fee EOR &bull; Zero Hidden Markups &bull; 100% Exclusive Teams</span>
     </div>
   </div>
 </footer>
