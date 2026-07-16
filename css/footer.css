@@ -1,17 +1,18 @@
 /* ============================================
-   FOOTER
+   FOOTER (Codezilla.io Dark Brutalist Style)
    ============================================ */
 .footer {
-  background: var(--c-dark);
-  color: rgba(255,255,255,0.7);
+  background: #000000;
+  color: #A1A1AA;
   padding: var(--sp-20) 0 0;
+  border-top: 2px solid #000000;
 }
 .footer__grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: var(--sp-12);
   padding-bottom: var(--sp-16);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 .footer__brand { max-width: 380px; }
 .footer__brand .navbar__logo {
@@ -37,8 +38,8 @@
 }
 .footer__social a {
   width: 38px; height: 38px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.2);
   display: flex; align-items: center; justify-content: center;
   transition: all var(--duration-fast) var(--ease-out);
 }
@@ -46,20 +47,23 @@
   background: var(--c-primary);
   border-color: var(--c-primary);
   color: white;
+  box-shadow: 2px 2px 0px 0px #FF6D00;
   transform: translateY(-2px);
 }
 .footer__social svg { width: 16px; height: 16px; }
 .footer__col h4 {
   font-family: var(--ff-heading);
-  font-size: var(--fs-body-sm);
-  font-weight: var(--fw-semibold);
-  color: white;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--c-primary);
   margin-bottom: var(--sp-6);
 }
 .footer__col ul { display: flex; flex-direction: column; gap: var(--sp-3); }
 .footer__col a {
   font-size: var(--fs-body-sm);
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.65);
   transition: all var(--duration-fast);
 }
 .footer__col a:hover { color: var(--c-primary-light); transform: translateX(3px); }
@@ -84,38 +88,40 @@
   gap: var(--sp-4);
   padding-bottom: var(--sp-10);
   margin-bottom: var(--sp-12);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 .footer__trust-item {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
   font-size: var(--fs-caption);
-  font-weight: var(--fw-medium);
-  color: rgba(255,255,255,0.85);
-  background: rgba(255,255,255,0.05);
-  padding: 8px 14px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255,255,255,0.1);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  background: #111111;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 .footer__trust-item svg, .footer__trust-item i {
   width: 16px; height: 16px;
-  color: var(--c-primary-light);
+  color: var(--c-primary);
 }
 
 /* Footer Legal Box */
 .footer__legal-box {
-  background: rgba(255,255,255,0.04);
+  background: #111111;
   padding: var(--sp-4);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   border-left: 3px solid var(--c-primary);
   font-size: 12px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   margin: var(--sp-4) 0;
 }
 .footer__legal-box strong {
-  color: rgba(255,255,255,0.9);
+  color: #FFFFFF;
 }
 
 /* Footer Privacy Pledge */
@@ -123,19 +129,19 @@
   display: flex;
   align-items: flex-start;
   gap: var(--sp-4);
-  background: rgba(13, 159, 110, 0.12);
-  border: 1px solid rgba(13, 159, 110, 0.3);
+  background: #111111;
+  border: 1px solid rgba(255, 109, 0, 0.35);
   padding: var(--sp-5) var(--sp-6);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   margin-top: var(--sp-8);
   margin-bottom: var(--sp-8);
   font-size: var(--fs-caption);
   line-height: 1.6;
-  color: rgba(255,255,255,0.8);
+  color: #D4D4D8;
 }
 .footer__privacy-icon {
   width: 36px; height: 36px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   background: var(--c-primary);
   color: white;
   display: flex; align-items: center; justify-content: center;
@@ -145,6 +151,8 @@
   width: 18px; height: 18px;
 }
 .footer__privacy-pledge strong {
-  color: #6EE7B7;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
 }
 

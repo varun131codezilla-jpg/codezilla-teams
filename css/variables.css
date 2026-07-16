@@ -1,56 +1,56 @@
 /* ============================================
-   CODEZILLA TEAMS — Organic & Warm Design Tokens
+   CODEZILLA TEAMS — Codezilla.io Theme Tokens
    ============================================ */
 
 :root {
-  /* ── Colors: Primary (Rich Emerald Green) ── */
-  --c-primary: #0D9F6E;
-  --c-primary-light: #34D399;
-  --c-primary-dark: #067A53;
-  --c-primary-50: #ECFDF5;
-  --c-primary-100: #D1FAE5;
-  --c-primary-900: #064E3B;
+  /* ── Colors: Primary (Codezilla Safety Orange) ── */
+  --c-primary: #FF6D00;
+  --c-primary-light: #FF8533;
+  --c-primary-dark: #E65100;
+  --c-primary-50: #FFF3E0;
+  --c-primary-100: #FFE0B2;
+  --c-primary-900: #331400;
 
-  /* ── Colors: Warm Accent (Amber / Gold) ── */
-  --c-accent: #D97706;
-  --c-accent-light: #F59E0B;
-  --c-accent-dark: #B45309;
-  --c-accent-50: #FFFBEB;
-  --c-accent-100: #FEF3C7;
+  /* ── Colors: Warm Accent (Electric Orange/Amber) ── */
+  --c-accent: #FF8533;
+  --c-accent-light: #FFA366;
+  --c-accent-dark: #CC5800;
+  --c-accent-50: #FFF8F0;
+  --c-accent-100: #FFECD9;
 
-  /* ── Colors: Dark (Deep Slate Navy) ── */
-  --c-dark: #0D1626;
-  --c-dark-light: #1A273D;
-  --c-dark-card: #141F33;
-  --c-dark-border: #233451;
+  /* ── Colors: Dark (Brutalist Deep Charcoal / Pure Black) ── */
+  --c-dark: #000000;
+  --c-dark-light: #18181B;
+  --c-dark-card: #111111;
+  --c-dark-border: #27272A;
 
-  /* ── Colors: Organic Neutrals (Warm Off-Whites & Creams) ── */
-  --c-text: #1E293B;
-  --c-text-secondary: #475569;
-  --c-text-muted: #8E9BAE;
-  --c-border: #E3E8EE;
+  /* ── Colors: Neutrals (Crisp White & Tech Gray) ── */
+  --c-text: #09090B;
+  --c-text-secondary: #3F3F46;
+  --c-text-muted: #71717A;
+  --c-border: #E4E4E7;
   --c-bg: #FFFFFF;
-  --c-bg-alt: #FAFAFA;
-  --c-bg-section: #F6F8FA;
-  --c-bg-warm: #FDFBF7;
-  --c-bg-cream: #F7F5F0;
+  --c-bg-alt: #F8F9FA;
+  --c-bg-section: #F4F4F5;
+  --c-bg-warm: #F8F9FA;
+  --c-bg-cream: #F1F5F9;
 
   /* ── Gradients ── */
-  --grad-primary: linear-gradient(135deg, #0D9F6E 0%, #0891B2 100%);
-  --grad-warm: linear-gradient(160deg, #FDFBF7 0%, #ECFDF5 50%, #F0F9FF 100%);
-  --grad-dark: linear-gradient(180deg, #0D1626 0%, #152238 100%);
-  --grad-cta: linear-gradient(135deg, #064E3B 0%, #0D1626 60%, #1A273D 100%);
-  --grad-text: linear-gradient(135deg, #0D9F6E 0%, #0891B2 100%);
+  --grad-primary: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
+  --grad-warm: linear-gradient(160deg, #FFFFFF 0%, #F8F9FA 50%, #FFF3E0 100%);
+  --grad-dark: linear-gradient(180deg, #111111 0%, #000000 100%);
+  --grad-cta: linear-gradient(135deg, #111111 0%, #000000 60%, #18181B 100%);
+  --grad-text: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
 
-  /* ── Typography ── */
-  --ff-heading: 'Plus Jakarta Sans', sans-serif;
-  --ff-body: 'Inter', sans-serif;
-  --ff-editorial: 'Newsreader', 'Playfair Display', serif;
+  /* ── Typography (Codezilla Manrope + Space Grotesk) ── */
+  --ff-heading: 'Space Grotesk', 'Manrope', sans-serif;
+  --ff-body: 'Manrope', sans-serif;
+  --ff-editorial: 'Space Grotesk', sans-serif;
 
-  --fs-display: clamp(2.65rem, 4.8vw, 4.25rem);
-  --fs-h1: clamp(2.15rem, 3.8vw, 3.25rem);
-  --fs-h2: clamp(1.75rem, 3.2vw, 2.65rem);
-  --fs-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --fs-display: clamp(2.65rem, 4.8vw, 4.5rem);
+  --fs-h1: clamp(2.15rem, 3.8vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.65rem);
   --fs-h4: clamp(1.05rem, 1.4vw, 1.25rem);
   --fs-body: clamp(0.98rem, 1.15vw, 1.125rem);
   --fs-body-sm: clamp(0.88rem, 1vw, 0.95rem);
@@ -63,10 +63,10 @@
   --fw-bold: 700;
   --fw-extrabold: 800;
 
-  --lh-heading: 1.16;
-  --lh-body: 1.72;
-  --ls-heading: -0.025em;
-  --ls-label: 0.08em;
+  --lh-heading: 1.12;
+  --lh-body: 1.68;
+  --ls-heading: -0.04em;
+  --ls-label: 0.12em;
 
   /* ── Spacing (4px grid) ── */
   --sp-1: 0.25rem;
@@ -86,31 +86,31 @@
   /* ── Layout ── */
   --max-width: 1240px;
   --max-width-narrow: 840px;
-  --nav-height: 76px;
+  --nav-height: 80px;
 
-  /* ── Borders & Radius ── */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
-  --radius-full: 9999px;
+  /* ── Borders & Radius (Sharp Modern Tech aesthetic like codezilla.io) ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 12px;
+  --radius-full: 4px;
 
-  /* ── Shadows ── */
-  --shadow-sm: 0 1px 3px rgba(13, 22, 38, 0.05);
-  --shadow-md: 0 4px 14px rgba(13, 22, 38, 0.07);
-  --shadow-lg: 0 14px 36px rgba(13, 22, 38, 0.09);
-  --shadow-xl: 0 24px 56px rgba(13, 22, 38, 0.12);
-  --shadow-glow: 0 0 40px rgba(13, 159, 110, 0.18);
-  --shadow-card: 0 1px 3px rgba(13, 22, 38, 0.03), 0 8px 20px rgba(13, 22, 38, 0.05);
-  --shadow-card-hover: 0 6px 12px rgba(13, 22, 38, 0.06), 0 16px 38px rgba(13, 22, 38, 0.11);
+  /* ── Shadows (High Contrast Brutalist + Orange Glow) ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 30px rgba(255, 109, 0, 0.25);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 4px 4px 0px 0px #000000;
 
   /* ── Transitions ── */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --duration-fast: 200ms;
-  --duration-normal: 350ms;
-  --duration-slow: 600ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
 
   /* ── Z-Index ── */
   --z-base: 1;

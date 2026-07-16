@@ -163,8 +163,8 @@
 /* ───────── SERVICES ───────── */
 .services { background: var(--grad-dark); color: white; }
 .services .section__label {
-  background: rgba(16,185,129,0.1);
-  border-color: rgba(16,185,129,0.2);
+  background: rgba(255, 109, 0, 0.15);
+  border-color: rgba(255, 109, 0, 0.3);
   color: var(--c-primary-light);
 }
 .services .section__title { color: white; }
@@ -193,14 +193,14 @@
 }
 .service-card:hover {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(16,185,129,0.3);
+  border-color: rgba(255, 109, 0, 0.4);
   transform: translateY(-4px);
 }
 .service-card:hover::before { transform: scaleX(1); }
 .service-card__icon {
   width: 52px; height: 52px;
   border-radius: var(--radius-md);
-  background: rgba(16,185,129,0.12);
+  background: rgba(255, 109, 0, 0.15);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: var(--sp-6);
   color: var(--c-primary-light);
@@ -438,7 +438,7 @@
   color: var(--c-dark);
 }
 .comparison-table th.col-eor {
-  background: rgba(13, 159, 110, 0.08);
+  background: rgba(255, 109, 0, 0.12);
   color: var(--c-primary-dark);
   border-left: 2px solid var(--c-primary);
   border-right: 2px solid var(--c-primary);
@@ -454,7 +454,7 @@
   width: 39%;
 }
 .comparison-table td.col-eor {
-  background: rgba(13, 159, 110, 0.04);
+  background: rgba(255, 109, 0, 0.05);
   color: var(--c-dark);
   font-weight: var(--fw-medium);
   border-left: 2px solid var(--c-primary);
@@ -494,7 +494,7 @@
 .pricing-card--popular {
   border: 2px solid var(--c-primary);
   box-shadow: var(--shadow-lg);
-  background: linear-gradient(180deg, rgba(13, 159, 110, 0.04) 0%, var(--c-bg) 100%);
+  background: linear-gradient(180deg, rgba(255, 109, 0, 0.06) 0%, var(--c-bg) 100%);
 }
 .pricing-card__badge {
   position: absolute;
