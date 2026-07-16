@@ -246,6 +246,22 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+/* Ensure secondary buttons inside dark sections/heroes automatically use high-contrast light borders/text */
+.hero .btn--secondary,
+.section--dark .btn--secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.hero .btn--secondary:hover,
+.section--dark .btn--secondary:hover {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+  color: #FFFFFF;
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
+  transform: translateY(-2px);
+}
+
 .btn--dark {
   background: var(--c-dark);
   color: #FFFFFF;
@@ -263,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn--outline-light {
   background: transparent;
   color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
 }
 
 .btn--outline-light:hover {
