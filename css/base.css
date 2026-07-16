@@ -205,10 +205,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--sp-2);
   font-family: var(--ff-heading);
   font-weight: var(--fw-bold);
-  font-size: var(--fs-label);
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: var(--ls-label);
-  padding: var(--sp-4) var(--sp-8);
+  letter-spacing: 0.12em;
+  padding: 0.75rem 1.75rem;
   border-radius: var(--radius-sm);
   transition: all var(--duration-normal) var(--ease-out);
   position: relative;
@@ -275,13 +275,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--lg {
-  padding: var(--sp-5) var(--sp-10);
-  font-size: var(--fs-body);
+  padding: 1rem 2.25rem;
+  font-size: 0.875rem;
 }
 
 .btn--sm {
-  padding: var(--sp-3) var(--sp-6);
-  font-size: var(--fs-body-sm);
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
 }
 
 .btn svg, .btn .btn-icon {

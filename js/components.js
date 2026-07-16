@@ -8,7 +8,7 @@ const NAVBAR_HTML = `
   <div class="container navbar__inner">
     <a href="index.html" class="navbar__logo">
       <span class="logo-mark">CT</span>
-      <span class="logo-text">Codezilla<span>Teams</span></span>
+      <span class="logo-text">Codezilla <span>Teams</span></span>
     </a>
     <ul class="navbar__links">
       <li><a href="index.html" data-page="index.html">Home</a></li>
@@ -19,7 +19,7 @@ const NAVBAR_HTML = `
       <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
     </ul>
     <div class="navbar__actions">
-      <a href="contact.html" class="btn btn--secondary btn--sm">Talk to an Expert</a>
+      <a href="contact.html" class="btn btn--secondary btn--sm navbar__expert-btn">Talk to an Expert</a>
       <a href="contact.html" class="btn btn--primary btn--sm">Book Consultation <i data-lucide="arrow-right"></i></a>
     </div>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menu">
@@ -54,7 +54,7 @@ const FOOTER_HTML = `
       <div class="footer__brand">
         <a href="index.html" class="navbar__logo">
           <span class="logo-mark">CT</span>
-          <span class="logo-text">Codezilla<span>Teams</span></span>
+          <span class="logo-text">Codezilla <span>Teams</span></span>
         </a>
         <p>Your legal Employer of Record partner for building 100% exclusive, compliant engineering and product teams in India without local entity overhead.</p>
         <div class="footer__legal-box">
