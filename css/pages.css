@@ -162,19 +162,21 @@
 }
 
 .service-detail-card__checklist li {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
+  position: relative;
+  padding-left: calc(16px + var(--sp-2));
   font-size: var(--fs-body-sm);
   color: var(--c-text);
   font-weight: var(--fw-medium);
+  line-height: 1.5;
 }
 
 .service-detail-card__checklist svg {
+  position: absolute;
+  left: 0;
+  top: 2px;
   width: 16px;
   height: 16px;
   color: var(--c-primary);
-  flex-shrink: 0;
 }
 
 /* ── Contact & Consultation Form ── */
