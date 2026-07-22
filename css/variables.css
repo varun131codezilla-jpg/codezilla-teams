@@ -3,26 +3,26 @@
    ============================================ */
 
 :root {
-  /* ── Colors: Primary (Codezilla Safety Orange) ── */
-  --c-primary: #FF6D00;
-  --c-primary-light: #FF8533;
-  --c-primary-dark: #E65100;
-  --c-primary-50: #FFF3E0;
-  --c-primary-100: #FFE0B2;
-  --c-primary-900: #331400;
+  /* ── Colors: Primary (Subtle Slate) ── */
+  --c-primary: #64748B;
+  --c-primary-light: #94A3B8;
+  --c-primary-dark: #475569;
+  --c-primary-50: #F8FAFC;
+  --c-primary-100: #F1F5F9;
+  --c-primary-900: #0F172A;
 
-  /* ── Colors: Warm Accent (Electric Orange/Amber) ── */
-  --c-accent: #FF8533;
-  --c-accent-light: #FFA366;
-  --c-accent-dark: #CC5800;
-  --c-accent-50: #FFF8F0;
-  --c-accent-100: #FFECD9;
+  /* ── Colors: Accent (Muted Indigo) ── */
+  --c-accent: #818CF8;
+  --c-accent-light: #A5B4FC;
+  --c-accent-dark: #6366F1;
+  --c-accent-50: #EEF2FF;
+  --c-accent-100: #E0E7FF;
 
-  /* ── Colors: Dark (Brutalist Deep Charcoal / Pure Black) ── */
-  --c-dark: #000000;
-  --c-dark-light: #18181B;
-  --c-dark-card: #111111;
-  --c-dark-border: #27272A;
+  /* ── Colors: Dark (Subtle Dark Slate) ── */
+  --c-dark: #1E293B;
+  --c-dark-light: #334155;
+  --c-dark-card: #0F172A;
+  --c-dark-border: #475569;
 
   /* ── Colors: Neutrals (Crisp White & Tech Gray) ── */
   --c-text: #09090B;
@@ -36,11 +36,11 @@
   --c-bg-cream: #F1F5F9;
 
   /* ── Gradients ── */
-  --grad-primary: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
-  --grad-warm: linear-gradient(160deg, #FFFFFF 0%, #F8F9FA 50%, #FFF3E0 100%);
-  --grad-dark: linear-gradient(180deg, #111111 0%, #000000 100%);
-  --grad-cta: linear-gradient(135deg, #111111 0%, #000000 60%, #18181B 100%);
-  --grad-text: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
+  --grad-primary: linear-gradient(135deg, #64748B 0%, #475569 100%);
+  --grad-warm: linear-gradient(160deg, #FFFFFF 0%, #F8FAFC 50%, #F1F5F9 100%);
+  --grad-dark: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+  --grad-cta: linear-gradient(135deg, #0F172A 0%, #1E293B 60%, #334155 100%);
+  --grad-text: linear-gradient(135deg, #64748B 0%, #475569 100%);
 
   /* ── Typography (Codezilla Manrope + Space Grotesk) ── */
   --ff-heading: 'Space Grotesk', 'Manrope', sans-serif;
@@ -101,7 +101,7 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 30px rgba(255, 109, 0, 0.25);
+  --shadow-glow: 0 0 30px rgba(100, 116, 139, 0.15);
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.06);
   --shadow-card-hover: 4px 4px 0px 0px #000000;
 
