@@ -1,23 +1,21 @@
 /* ============================================
-   TRUST STRIP — Scrolling Marquee (Codezilla.io Style)
+   TRUST STRIP — Scrolling Marquee
    ============================================ */
 .trust-strip {
-  background: #000000;
-  padding: var(--sp-5) 0;
+  background: var(--c-dark);
+  padding: var(--sp-6) 0;
   overflow: hidden;
   position: relative;
-  border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
 }
 .trust-strip__label {
   text-align: center;
   font-family: var(--ff-heading);
   font-size: var(--fs-caption);
-  font-weight: var(--fw-bold);
-  color: var(--c-primary);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  padding-bottom: var(--sp-4);
+  padding-bottom: var(--sp-5);
 }
 .trust-strip__track {
   display: flex; width: max-content;
@@ -29,11 +27,9 @@
   padding: 0 var(--sp-10);
   white-space: nowrap;
   font-family: var(--ff-heading);
-  font-size: var(--fs-label);
-  font-weight: var(--fw-extrabold);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #FFFFFF;
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  color: rgba(255,255,255,0.7);
 }
 .trust-strip__item svg {
   width: 20px; height: 20px;
@@ -41,7 +37,7 @@
   flex-shrink: 0;
 }
 .trust-strip__divider {
-  color: var(--c-primary);
+  color: rgba(255,255,255,0.15);
   font-size: 1.2rem;
   padding: 0 var(--sp-2);
 }
@@ -54,9 +50,9 @@
 }
 .trust-strip::before {
   left: 0;
-  background: linear-gradient(90deg, #000000, transparent);
+  background: linear-gradient(90deg, var(--c-dark), transparent);
 }
 .trust-strip::after {
   right: 0;
-  background: linear-gradient(-90deg, #000000, transparent);
+  background: linear-gradient(-90deg, var(--c-dark), transparent);
 }

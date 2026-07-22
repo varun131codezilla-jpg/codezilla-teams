@@ -22,8 +22,8 @@ body {
   line-height: var(--lh-body);
   color: var(--c-text);
   background-color: var(--c-bg);
-  /* Subtle tech grid texture overlay */
-  background-image: radial-gradient(rgba(255, 109, 0, 0.03) 1px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 0);
+  /* Organic subtle texture overlay across all pages */
+  background-image: radial-gradient(rgba(13, 159, 110, 0.02) 1px, transparent 0), radial-gradient(rgba(217, 119, 6, 0.015) 1px, transparent 0);
   background-size: 32px 32px;
   background-position: 0 0, 16px 16px;
   -webkit-font-smoothing: antialiased;
@@ -90,8 +90,8 @@ input, textarea, select { font: inherit; }
 
 .section--warm {
   background: var(--c-bg-warm);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  border-top: 1px solid rgba(13, 159, 110, 0.08);
+  border-bottom: 1px solid rgba(13, 159, 110, 0.08);
 }
 
 .section--dark {
@@ -122,8 +122,8 @@ input, textarea, select { font: inherit; }
 }
 
 .section--dark .section__label {
-  background: rgba(255, 109, 0, 0.15);
-  border-color: rgba(255, 109, 0, 0.3);
+  background: rgba(13, 159, 110, 0.15);
+  border-color: rgba(13, 159, 110, 0.25);
   color: var(--c-primary-light);
 }
 
@@ -197,19 +197,17 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--c-primary);
 }
 
-/* ── Buttons (Codezilla.io Sharp Tech Style) ── */
+/* ── Buttons ── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--sp-2);
   font-family: var(--ff-heading);
-  font-weight: var(--fw-bold);
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.75rem 1.75rem;
-  border-radius: var(--radius-sm);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-body-sm);
+  padding: var(--sp-4) var(--sp-8);
+  border-radius: var(--radius-full);
   transition: all var(--duration-normal) var(--ease-out);
   position: relative;
   overflow: hidden;
@@ -220,85 +218,57 @@ h1, h2, h3, h4, h5, h6 {
 .btn--primary {
   background: var(--c-primary);
   color: #FFFFFF;
-  border: 1px solid var(--c-primary);
-  box-shadow: 0 4px 14px rgba(255, 109, 0, 0.3);
+  box-shadow: 0 4px 14px rgba(13, 159, 110, 0.35);
 }
 
 .btn--primary:hover {
-  background: #FFFFFF;
-  color: #000000;
-  border-color: #000000;
-  box-shadow: 4px 4px 0px 0px #FF6D00;
+  background: var(--c-primary-dark);
+  box-shadow: 0 6px 20px rgba(13, 159, 110, 0.45);
   transform: translateY(-2px);
 }
 
 .btn--secondary {
   background: transparent;
   color: var(--c-text);
-  border: 1.5px solid var(--c-dark);
+  border: 1.5px solid var(--c-border);
 }
 
 .btn--secondary:hover {
-  background: var(--c-dark);
-  color: #FFFFFF;
-  border-color: var(--c-dark);
-  box-shadow: 4px 4px 0px 0px #FF6D00;
-  transform: translateY(-2px);
-}
-
-/* Ensure secondary buttons inside dark sections/heroes automatically use high-contrast light borders/text */
-.hero .btn--secondary,
-.section--dark .btn--secondary {
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.75);
-}
-
-.hero .btn--secondary:hover,
-.section--dark .btn--secondary:hover {
-  background: var(--c-primary);
   border-color: var(--c-primary);
-  color: #FFFFFF;
-  box-shadow: 4px 4px 0px 0px #FFFFFF;
+  color: var(--c-primary);
   transform: translateY(-2px);
 }
 
 .btn--dark {
   background: var(--c-dark);
   color: #FFFFFF;
-  border: 1.5px solid var(--c-dark);
 }
 
 .btn--dark:hover {
-  background: var(--c-primary);
-  border-color: var(--c-primary);
-  color: #FFFFFF;
-  box-shadow: 4px 4px 0px 0px #000000;
+  background: var(--c-dark-light);
   transform: translateY(-2px);
 }
 
 .btn--outline-light {
   background: transparent;
   color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn--outline-light:hover {
-  border-color: var(--c-primary);
-  background: var(--c-primary);
-  color: #FFFFFF;
-  box-shadow: 4px 4px 0px 0px #FFFFFF;
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
   transform: translateY(-2px);
 }
 
 .btn--lg {
-  padding: 1rem 2.25rem;
-  font-size: 0.875rem;
+  padding: var(--sp-5) var(--sp-10);
+  font-size: var(--fs-body);
 }
 
 .btn--sm {
-  padding: 0.5rem 1.25rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  padding: var(--sp-3) var(--sp-6);
+  font-size: var(--fs-body-sm);
 }
 
 .btn svg, .btn .btn-icon {
