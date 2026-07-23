@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The EOR Compliance Playbook | Codezilla Teams</title>
+<meta name="description" content="Our open-source operational blueprint for India EOR. See exactly how we structure contracts, manage statutory payroll, and protect your IP across borders.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230D9F6E'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='16'>CT</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/base.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/animations.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/navbar.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/sections.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/pages.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/footer.css?v=20260722_fixed">
+<link rel="stylesheet" href="css/responsive.css?v=20260722_fixed">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+<style>
+/* Custom Styles for the Playbook */
+.playbook-intro {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-8);
+  margin-bottom: var(--sp-12);
+  box-shadow: var(--shadow-sm);
+}
+
+.playbook-phase {
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  margin-bottom: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.playbook-phase:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.playbook-phase__number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 120px;
+  font-weight: 800;
+  color: var(--c-primary-50);
+  line-height: 1;
+  opacity: 0.5;
+  pointer-events: none;
+  font-family: var(--font-display);
+}
+.playbook-phase h3 {
+  font-size: var(--fs-h3);
+  color: var(--c-dark);
+  margin-bottom: var(--sp-6);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  position: relative;
+  z-index: 1;
+}
+.playbook-step {
+  margin-bottom: var(--sp-6);
+  position: relative;
+  z-index: 1;
+}
+.playbook-step h4 {
+  font-size: var(--fs-body);
+  color: var(--c-primary-dark);
+  margin-bottom: var(--sp-2);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.playbook-step ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.playbook-step ul li {
+  padding-left: var(--sp-6);
+  position: relative;
+  margin-bottom: var(--sp-2);
+  color: var(--c-text-secondary);
+  line-height: 1.6;
+}
+.playbook-step ul li::before {
+  content: "•";
+  color: var(--c-primary);
+  position: absolute;
+  left: var(--sp-2);
+  font-weight: bold;
+}
+
+.scenario-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  margin-bottom: var(--sp-6);
+  box-shadow: var(--shadow-sm);
+}
+.scenario-card h3 {
+  font-size: var(--fs-h3);
+  color: var(--c-dark);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--c-border);
+}
+.scenario-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--c-primary-50);
+  color: var(--c-primary-dark);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+}
+.scenario-section {
+  margin-bottom: var(--sp-4);
+}
+.scenario-section h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-2);
+}
+.scenario-section p {
+  color: var(--c-text-secondary);
+  line-height: 1.6;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: var(--sp-6);
+}
+.playbook-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.playbook-table th {
+  background: var(--c-bg);
+  text-align: left;
+  padding: var(--sp-4);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  color: var(--c-dark);
+  border-bottom: 2px solid var(--c-border);
+}
+.playbook-table td {
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text-secondary);
+  font-size: var(--fs-body-sm);
+}
+.playbook-table tr:last-child td {
+  border-bottom: none;
+}
+</style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner reveal">
+      <div class="section__label"><i data-lucide="book-open"></i> Open-Source Operations</div>
+      <h1 class="page-hero__title">The EOR Compliance Playbook</h1>
+      <p class="page-hero__desc">We believe in absolute transparency. Below is our exact operational blueprint for onboarding talent in India, managing statutory compliance, and resolving complex cross-border legal scenarios.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PART 1: THE ONBOARDING BLUEPRINT ═══ -->
+<section class="section" id="blueprint">
+  <div class="container">
+    <div class="section__header reveal">
+      <h2 class="section__title">Part 1: The Onboarding Blueprint</h2>
+      <p class="section__subtitle">From candidate selection to Day 1, here is how we ensure strict adherence to Madhya Pradesh labor laws, central statutory mandates, and international cross-border compliance.</p>
+    </div>
+
+    <!-- Phase 1 -->
+    <div class="playbook-phase reveal">
+      <div class="playbook-phase__number">1</div>
+      <h3><i data-lucide="building"></i> Phase 1: Client Contracting & Financial Setup (The B2B Leg)</h3>
+      <p style="color:var(--c-text-secondary);margin-bottom:var(--sp-6);">Before issuing employment offers, the legal framework between Codezilla Teams and the foreign client must be locked in to protect both parties from tax and Permanent Establishment (PE) risks.</p>
+      
+      <div class="playbook-step">
+        <h4>1. Client Verification (KYB)</h4>
+        <ul>
+          <li><strong>Action:</strong> Collect the foreign client’s corporate registration documents to satisfy anti-money laundering (AML) norms.</li>
+          <li><strong>SOP:</strong> Verify the legal existence of the foreign entity and authorized signatories before drafting agreements.</li>
+        </ul>
+      </div>
+
+      <div class="playbook-step">
+        <h4>2. Master Service Agreement (MSA) Execution</h4>
+        <ul>
+          <li><strong>Principal-to-Principal:</strong> The MSA explicitly states the EOR is the substantive, independent legal employer, mitigating the risk of being classified as an "intermediary" (triggering 18% domestic GST).</li>
+          <li><strong>Two-Hop IP Assignment (Hop 2):</strong> An irrevocable, present-tense clause where the EOR assigns all Intellectual Property (IP) generated by the employees directly to the foreign client.</li>
+          <li><strong>PE Insulation:</strong> Explicitly restrict the hired employees from having executive contract-signing authority on behalf of the foreign client.</li>
+        </ul>
+      </div>
+
+      <div class="playbook-step">
+        <h4>3. Invoicing and Security Deposit</h4>
+        <ul>
+          <li><strong>Action:</strong> Issue the proforma invoice for the refundable security deposit (typically one month of gross salaries).</li>
+          <li><strong>SOP:</strong> Ensure the incoming remittance utilizes correct RBI Purpose Codes: P1401 for employee compensation and P1006 for the EOR management fee.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="playbook-phase reveal stagger-1">
+      <div class="playbook-phase__number">2</div>
+      <h3><i data-lucide="file-signature"></i> Phase 2: Employee Contracting & Documentation (The B2C Leg)</h3>
+      
+      <div class="playbook-step">
+        <h4>1. Structuring the Employment Contract</h4>
+        <ul>
+          <li><strong>Working Hours:</strong> Cap standard hours at 10 hours/day and 48 hours/week per the Madhya Pradesh Shops and Establishments Act, 1958.</li>
+          <li><strong>Leave Entitlements:</strong> Integrate MP statutory leaves (e.g., 14 days casual leave, privilege leave accrual).</li>
+          <li><strong>Bonus Calculations:</strong> Structure the salary to account for the Payment of Bonus Act, 1965 (8.33% statutory minimum against the ₹7,000 calculation ceiling for applicable salaries).</li>
+          <li><strong>Two-Hop IP Assignment (Hop 1):</strong> Present-tense assignment clause transferring all IP (including Generative AI outputs) from the employee to the EOR, including a waiver of moral rights.</li>
+        </ul>
+      </div>
+
+      <div class="playbook-step">
+        <h4>2. Digital Personal Data Protection Act (DPDPA) Compliance</h4>
+        <ul>
+          <li><strong>Action:</strong> Issue an Employee Privacy Notice alongside the offer letter.</li>
+          <li><strong>SOP:</strong> While payroll processing falls under "Legitimate Use", explicit documented consent is obtained for third-party background checks, productivity monitoring, or biometric data collection.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="playbook-phase reveal stagger-2">
+      <div class="playbook-phase__number">3</div>
+      <h3><i data-lucide="shield-check"></i> Phase 3: Statutory Onboarding & KYC</h3>
+      
+      <div class="playbook-step">
+        <h4>1. Document Collection Portal</h4>
+        <div class="table-wrapper">
+          <table class="playbook-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Required Items</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Identity & Taxation</strong></td>
+                <td>Aadhaar Card, PAN Card</td>
+                <td>Mandatory for Income Tax (TDS) and EPF/ESI linking.</td>
+              </tr>
+              <tr>
+                <td><strong>Financial</strong></td>
+                <td>Canceled Cheque or Bank Statement</td>
+                <td>For setting up direct deposit salary routing.</td>
+              </tr>
+              <tr>
+                <td><strong>Professional</strong></td>
+                <td>Relieving Letter, Experience Certificates</td>
+                <td>To verify employment history and calculate gratuity continuity.</td>
+              </tr>
+              <tr>
+                <td><strong>Educational</strong></td>
+                <td>Highest Degree Certificates</td>
+                <td>For client background verification purposes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="playbook-step">
+        <h4>2. Government Portal Registrations</h4>
+        <ul>
+          <li><strong>Provident Fund (EPF):</strong> Generate or transfer the Universal Account Number (UAN) for new hires.</li>
+          <li><strong>State Insurance (ESI):</strong> Enroll employees earning a gross monthly salary of ₹21,000 or less into the ESI scheme.</li>
+          <li><strong>Professional Tax (PT):</strong> Add employees to the Madhya Pradesh PT roster and map to the correct tax slab (e.g., ₹208/month deduction).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="playbook-phase reveal stagger-3">
+      <div class="playbook-phase__number">4</div>
+      <h3><i data-lucide="laptop"></i> Phase 4: IT Asset Procurement & Logistics</h3>
+      <p style="color:var(--c-text-secondary);margin-bottom:var(--sp-6);">Hardware provisioning is handled locally by the EOR to avoid cross-border customs delays for the foreign client.</p>
+      
+      <div class="playbook-step">
+        <h4>1. Procurement & Custodianship</h4>
+        <ul>
+          <li><strong>Action:</strong> Purchase the exact hardware specifications from authorized domestic vendors in India.</li>
+          <li><strong>SOP:</strong> The invoice is generated in the EOR's name (the EOR is the custodian of the asset), and the capital cost is cross-charged to the foreign client transparently.</li>
+        </ul>
+      </div>
+
+      <div class="playbook-step">
+        <h4>2. Security and Dispatch</h4>
+        <ul>
+          <li><strong>Action:</strong> Install Mobile Device Management (MDM) software on laptops.</li>
+          <li><strong>SOP:</strong> MDM allows automated, remote data wipes if an employee is terminated or a laptop is lost. Laptops are dispatched via insured courier to remote addresses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div class="playbook-phase reveal stagger-4">
+      <div class="playbook-phase__number">5</div>
+      <h3><i data-lucide="calendar-check"></i> Phase 5: Payroll Activation & Day 1</h3>
+      
+      <div class="playbook-step">
+        <h4>1. Payroll Hub Integration</h4>
+        <ul>
+          <li><strong>Action:</strong> Enter the employees' exact Total Cost to Company (CTC) breakdowns into payroll software.</li>
+          <li><strong>SOP:</strong> Automate TDS withholding, EPF (12% employer + 12% employee), MP Professional Tax, and Gratuity accruals (4.81% of basic salary).</li>
+        </ul>
+      </div>
+
+      <div class="playbook-step">
+        <h4>2. Day 1 Handover</h4>
+        <ul>
+          <li><strong>Action:</strong> The EOR HR team conducts a brief compliance onboarding (leave policies, tax declarations, timesheets).</li>
+          <li><strong>SOP:</strong> Following the briefing, employees are officially handed over to the foreign client's project managers via the functional reporting line to begin daily work.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PART 2: ONGOING OPERATIONS & COMPLIANCE ═══ -->
+<section class="section section--alt" id="ongoing-operations">
+  <div class="container">
+    <div class="section__header reveal">
+      <h2 class="section__title">Part 2: Ongoing Operations & Compliance SOPs</h2>
+      <p class="section__subtitle">Once employees are active, our back-office runs on a strict, cyclical schedule to ensure 100% compliance with Indian tax authorities.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--sp-6);">
+      
+      <!-- Box 1 -->
+      <div style="background:#fff;padding:var(--sp-6);border-radius:var(--radius-lg);border:1px solid var(--c-border);box-shadow:var(--shadow-sm);" class="reveal">
+        <h3 style="font-size:var(--fs-h4);color:var(--c-primary-dark);margin-bottom:var(--sp-4);display:flex;align-items:center;gap:8px;"><i data-lucide="clock-4"></i> The Monthly Payroll Cycle</h3>
+        <ul style="list-style:none;padding:0;margin:0;font-size:var(--fs-body-sm);color:var(--c-text-secondary);display:flex;flex-direction:column;gap:12px;">
+          <li><strong style="color:var(--c-dark);">1st–3rd:</strong> Collect approved timesheets & expense reimbursement requests.</li>
+          <li><strong style="color:var(--c-dark);">7th:</strong> Deposit TDS to Income Tax Department. Disburse net salaries to employees (Payment of Wages Act).</li>
+          <li><strong style="color:var(--c-dark);">11th & 20th:</strong> File GSTR-1 and GSTR-3B (Export of services under LUT).</li>
+          <li><strong style="color:var(--c-dark);">15th:</strong> Deposit EPF (24%) and ESI (4%) and file ECR on EPFO portal.</li>
+          <li><strong style="color:var(--c-dark);">State-Specific:</strong> Remit deducted Professional Tax to MP commercial tax department.</li>
+        </ul>
+      </div>
+
+      <!-- Box 2 -->
+      <div style="background:#fff;padding:var(--sp-6);border-radius:var(--radius-lg);border:1px solid var(--c-border);box-shadow:var(--shadow-sm);" class="reveal stagger-1">
+        <h3 style="font-size:var(--fs-h4);color:var(--c-primary-dark);margin-bottom:var(--sp-4);display:flex;align-items:center;gap:8px;"><i data-lucide="globe"></i> Cross-Border Invoicing (FEMA)</h3>
+        <ul style="list-style:none;padding:0;margin:0;font-size:var(--fs-body-sm);color:var(--c-text-secondary);display:flex;flex-direction:column;gap:12px;">
+          <li><strong style="color:var(--c-dark);">Bifurcation:</strong> Invoices strictly separate (A) Salary Reimbursement and (B) EOR Management Fee.</li>
+          <li><strong style="color:var(--c-dark);">LUT Declaration:</strong> Invoices state: <em>"Supply meant for export under LUT without payment of IGST"</em>.</li>
+          <li><strong style="color:var(--c-dark);">RBI Purpose Codes:</strong> P1401 for compensation, P1006 for management consultancy.</li>
+          <li><strong style="color:var(--c-dark);">FIRC Generation:</strong> We obtain a Foreign Inward Remittance Certificate (FIRC) for every transaction to defend GST audits.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PART 3: EDGE-CASE SCENARIOS ═══ -->
+<section class="section" id="scenarios">
+  <div class="container">
+    <div class="section__header reveal">
+      <h2 class="section__title">Part 3: Edge-Case Scenarios & Workflows</h2>
+      <p class="section__subtitle">In a tripartite arrangement (EOR, Client, Employee), friction is inevitable. Because we hold the legal liability, we buffer you from Indian labor courts and tax authorities. Here is how we resolve complex structural problems.</p>
+    </div>
+
+    <!-- Scenario 1 -->
+    <div class="scenario-card reveal">
+      <div class="scenario-tag">Labor Law</div>
+      <h3>The Client Demands Immediate Termination</h3>
+      
+      <div class="scenario-section">
+        <h4>The Scenario & Risk</h4>
+        <p>The client is unhappy with an employee and requests an immediate firing. While "at-will" employment exists in the US, an immediate, un-documented termination of a confirmed employee in Madhya Pradesh violates the Shops and Establishments Act, risking a wrongful termination lawsuit.</p>
+      </div>
+      
+      <div class="scenario-section">
+        <h4>The Resolution Workflow</h4>
+        <ol style="padding-left:var(--sp-4);color:var(--c-text-secondary);line-height:1.6;">
+          <li><strong>Intercept & Educate:</strong> We inform the client that Indian law requires due process.</li>
+          <li><strong>Notice Period:</strong> We execute termination per the contract—providing 30 days of working notice or paying 30 days of basic wages in lieu of notice.</li>
+          <li><strong>Asset Retrieval (IT SOP):</strong> We instantly trigger MDM software to lock the laptop and wipe proprietary data, then initiate reverse-courier logistics.</li>
+          <li><strong>Full & Final (F&F) Settlement:</strong> We calculate all pending dues (salary, privilege leave encashment, statutory bonus) and settle within 2 working days to avoid litigation.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Scenario 2 -->
+    <div class="scenario-card reveal stagger-1">
+      <div class="scenario-tag">Taxation</div>
+      <h3>FIRC Rejection & GST Intermediary Notice</h3>
+      
+      <div class="scenario-section">
+        <h4>The Scenario & Risk</h4>
+        <p>The GST Department audits the EOR and issues a "REG-03" notice, claiming we are merely an "intermediary" (payroll agent) and demanding 18% IGST on all historical invoices sent to the foreign client.</p>
+      </div>
+      
+      <div class="scenario-section">
+        <h4>The Resolution Workflow</h4>
+        <ol style="padding-left:var(--sp-4);color:var(--c-text-secondary);line-height:1.6;">
+          <li><strong>Deploy the MSA:</strong> We respond using the "Principal-to-Principal" clause in our Master Service Agreement to prove we are the substantive employer taking legal risk, not a commission agent.</li>
+          <li><strong>Submit Evidentiary Trail:</strong> We provide employment contracts (proving labor liability) and FIRCs (proving foreign exchange realization).</li>
+          <li><strong>Legal Precedent:</strong> We cite exceptions to the <em>Northern Operating Systems (NOS)</em> Supreme Court ruling, proving an independent export of service.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Scenario 3 -->
+    <div class="scenario-card reveal stagger-2">
+      <div class="scenario-tag">Financial Liability</div>
+      <h3>Unused Leave Accumulation Liability</h3>
+      
+      <div class="scenario-section">
+        <h4>The Scenario & Risk</h4>
+        <p>A tech employee does not take their earned privilege leave for two years. Under the MP Shops Act, unused privilege leave accumulates up to 90 days. If the contract is terminated, the client is suddenly hit with a massive invoice to encash 90 days of leave, causing budget friction.</p>
+      </div>
+      
+      <div class="scenario-section">
+        <h4>The Resolution Workflow</h4>
+        <ol style="padding-left:var(--sp-4);color:var(--c-text-secondary);line-height:1.6;">
+          <li><strong>Quarterly Audits:</strong> We run quarterly leave balance reports.</li>
+          <li><strong>Mandatory Time Off (MTO):</strong> If an employee approaches 60 days of leave, we enforce an EOR-mandated "cool-down" period, coordinating with the client's manager to force time off and bleed down financial liability.</li>
+          <li><strong>Client Budgeting:</strong> Our monthly invoice includes a transparent line-item tracking accrued leave liability so the client is never surprised.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Scenario 4 -->
+    <div class="scenario-card reveal stagger-3">
+      <div class="scenario-tag">Intellectual Property</div>
+      <h3>Generative AI and IP Contamination</h3>
+      
+      <div class="scenario-section">
+        <h4>The Scenario & Risk</h4>
+        <p>A software developer uses unauthorized GenAI tools to write code. The client conducts an audit and realizes the Intellectual Property (IP) might be contaminated. The client blames the EOR for failing to secure the IP chain of title.</p>
+      </div>
+      
+      <div class="scenario-section">
+        <h4>The Resolution Workflow</h4>
+        <ol style="padding-left:var(--sp-4);color:var(--c-text-secondary);line-height:1.6;">
+          <li><strong>Proactive Defense:</strong> We ensure the employment contract (Hop 1) explicitly governs the use of GenAI and broadens the definition of "covered work".</li>
+          <li><strong>Reactive Defense:</strong> We issue a formal show-cause notice to the employee for violating the IT policy.</li>
+          <li><strong>Indemnification Enforcement:</strong> If necessary, we trigger disciplinary clauses to terminate the employee for cause (breach of IP), shielding the EOR and client from further contamination.</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA BANNER ═══ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta__content reveal">
+      <h2 class="final-cta__title">Ready to work with genuine local experts?</h2>
+      <p class="final-cta__subtitle">Stop guessing about Indian compliance. Let our Indore-based legal and HR teams secure your expansion.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg" style="margin-top:var(--sp-6);">Book a Compliance Consultation <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/components.js?v=20260722_fixed"></script>
+<script src="js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();})</script>
+</body>
+</html>

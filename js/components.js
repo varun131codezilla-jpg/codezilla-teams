@@ -16,6 +16,7 @@ const NAVBAR_HTML = `
       <li><a href="how-it-works.html" data-page="how-it-works.html">How It Works</a></li>
       <li><a href="about.html" data-page="about.html">About Us</a></li>
       <li><a href="industries.html" data-page="industries.html">Industries</a></li>
+      <li><a href="compliance-playbook.html" data-page="compliance-playbook.html">Playbook</a></li>
       <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
     </ul>
     <div class="navbar__actions">
@@ -33,6 +34,7 @@ const NAVBAR_HTML = `
     <a href="how-it-works.html" data-page="how-it-works.html">How It Works</a>
     <a href="about.html" data-page="about.html">About Us</a>
     <a href="industries.html" data-page="industries.html">Industries</a>
+    <a href="compliance-playbook.html" data-page="compliance-playbook.html">Playbook</a>
     <a href="faq.html" data-page="faq.html">FAQ</a>
     <a href="contact.html" class="btn btn--primary">Book Consultation</a>
   </div>
@@ -92,6 +94,7 @@ const FOOTER_HTML = `
           <li><a href="how-it-works.html#agency-vs-eor">Agency vs. True EOR Comparison</a></li>
           <li><a href="how-it-works.html">3-Day Rapid Onboarding</a></li>
           <li><a href="services.html#transition">$0 Subsidiary Transition Guarantee</a></li>
+          <li><a href="compliance-playbook.html">EOR Compliance Playbook</a></li>
           <li><a href="faq.html">Frequently Asked Questions</a></li>
         </ul>
       </div>
