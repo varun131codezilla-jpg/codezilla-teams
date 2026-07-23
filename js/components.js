@@ -49,8 +49,7 @@ const FOOTER_HTML = `
       <div class="footer__trust-item"><i data-lucide="shield-check"></i> ISO/IEC 27001:2022 Certified</div>
       <div class="footer__trust-item"><i data-lucide="lock"></i> SOC 2 Type II Compliant</div>
       <div class="footer__trust-item"><i data-lucide="file-check-2"></i> GDPR &amp; DPDPA 2023 DPA</div>
-      <div class="footer__trust-item"><i data-lucide="award"></i> $5M E&amp;O Indemnity Insured</div>
-      <div class="footer__trust-item"><i data-lucide="users-2"></i> 100% Exclusive EOR Contracts</div>
+      <div class="footer__trust-item"><i data-lucide="shield"></i> 100% Indian Labor Compliant</div>
     </div>
 
     <div class="footer__grid">
