@@ -11,7 +11,6 @@ const NAVBAR_HTML = `
       <span class="logo-text">Codezilla <span>Teams</span></span>
     </a>
     <ul class="navbar__links">
-      <li><a href="index.html" data-page="index.html">Home</a></li>
       <li><a href="services.html" data-page="services.html">Services</a></li>
       <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
       <li><a href="how-it-works.html" data-page="how-it-works.html">How It Works</a></li>
