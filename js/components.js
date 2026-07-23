@@ -13,6 +13,7 @@ const NAVBAR_HTML = `
     <ul class="navbar__links">
       <li><a href="index.html" data-page="index.html">Home</a></li>
       <li><a href="services.html" data-page="services.html">Services</a></li>
+      <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
       <li><a href="how-it-works.html" data-page="how-it-works.html">How It Works</a></li>
       <li><a href="about.html" data-page="about.html">About Us</a></li>
       <li><a href="industries.html" data-page="industries.html">Industries</a></li>
@@ -29,6 +30,7 @@ const NAVBAR_HTML = `
   <div class="navbar__mobile" id="nav-mobile">
     <a href="index.html" data-page="index.html">Home</a>
     <a href="services.html" data-page="services.html">Services</a>
+    <a href="pricing.html" data-page="pricing.html">Pricing</a>
     <a href="how-it-works.html" data-page="how-it-works.html">How It Works</a>
     <a href="about.html" data-page="about.html">About Us</a>
     <a href="industries.html" data-page="industries.html">Industries</a>
@@ -76,11 +78,11 @@ const FOOTER_HTML = `
         <h4>Services & Pricing</h4>
         <ul>
           <li><a href="services.html#eor">Employer of Record (EOR)</a></li>
+          <li><a href="services.html#contractor">Contractor of Record</a></li>
+          <li><a href="services.html#recruitment">Recruitment Concierge</a></li>
           <li><a href="services.html#payroll">Payroll & Tax (TDS) Management</a></li>
           <li><a href="services.html#compliance">Statutory Compliance (EPFO/ESIC)</a></li>
-          <li><a href="services.html#benefits">Group Health Insurance & Benefits</a></li>
-          <li><a href="services.html#hr">Lifecycle HR Administration</a></li>
-          <li><a href="services.html#pricing">Fixed Flat-Fee Pricing Bands</a></li>
+          <li><a href="pricing.html">Transparent Pricing</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -89,7 +91,7 @@ const FOOTER_HTML = `
           <li><a href="about.html#leadership">Indore HQ & Executive Leadership</a></li>
           <li><a href="about.html#compliance">100% Legal & Liability Protection</a></li>
           <li><a href="how-it-works.html#agency-vs-eor">Agency vs. True EOR Comparison</a></li>
-          <li><a href="how-it-works.html">72-Hour Rapid Onboarding</a></li>
+          <li><a href="how-it-works.html">3-Day Rapid Onboarding</a></li>
           <li><a href="services.html#transition">$0 Subsidiary Transition Guarantee</a></li>
           <li><a href="faq.html">Frequently Asked Questions</a></li>
         </ul>
