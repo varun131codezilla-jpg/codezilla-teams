@@ -76,11 +76,12 @@
   font-size: var(--fs-body-sm);
   font-weight: var(--fw-medium);
   color: var(--c-text-secondary);
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: var(--radius-md);
   transition: all var(--duration-fast) var(--ease-out);
   position: relative;
   display: block;
+  white-space: nowrap;
 }
 
 .navbar__links a:hover,
