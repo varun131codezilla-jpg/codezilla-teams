@@ -7,7 +7,7 @@ const NAVBAR_HTML = `
 <nav class="navbar" id="navbar">
   <div class="container navbar__inner">
     <a href="index.html" class="navbar__logo">
-      <span class="logo-mark">CT</span>
+      <img class="logo-mark-img" src="assets/images/logo.svg" alt="CT Logo">
       <span class="logo-text">Codezilla <span>Teams</span></span>
     </a>
     <ul class="navbar__links">
@@ -55,7 +55,7 @@ const FOOTER_HTML = `
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="navbar__logo">
-          <span class="logo-mark">CT</span>
+          <img class="logo-mark-img" src="assets/images/logo.svg" alt="CT Logo">
           <span class="logo-text">Codezilla <span>Teams</span></span>
         </a>
         <p>Your legal Employer of Record partner for building 100% exclusive, compliant engineering and product teams in India without local entity overhead.</p>
