@@ -3,13 +3,13 @@
    ============================================ */
 
 :root {
-  /* ── Colors: Primary (Rich Emerald Green) ── */
-  --c-primary: #0D9F6E;
-  --c-primary-light: #34D399;
-  --c-primary-dark: #067A53;
-  --c-primary-50: #ECFDF5;
-  --c-primary-100: #D1FAE5;
-  --c-primary-900: #064E3B;
+  /* ── Colors: Primary (Vibrant Orange) ── */
+  --c-primary: #EA580C;
+  --c-primary-light: #FB923C;
+  --c-primary-dark: #C2410C;
+  --c-primary-50: #FFF7ED;
+  --c-primary-100: #FFEDD5;
+  --c-primary-900: #7C2D12;
 
   /* ── Colors: Warm Accent (Amber / Gold) ── */
   --c-accent: #D97706;
@@ -36,11 +36,11 @@
   --c-bg-cream: #F7F5F0;
 
   /* ── Gradients ── */
-  --grad-primary: linear-gradient(135deg, #0D9F6E 0%, #0891B2 100%);
-  --grad-warm: linear-gradient(160deg, #FDFBF7 0%, #ECFDF5 50%, #F0F9FF 100%);
+  --grad-primary: linear-gradient(135deg, #EA580C 0%, #F59E0B 100%);
+  --grad-warm: linear-gradient(160deg, #FDFBF7 0%, #FFF7ED 50%, #FFEDD5 100%);
   --grad-dark: linear-gradient(180deg, #0D1626 0%, #152238 100%);
-  --grad-cta: linear-gradient(135deg, #064E3B 0%, #0D1626 60%, #1A273D 100%);
-  --grad-text: linear-gradient(135deg, #0D9F6E 0%, #0891B2 100%);
+  --grad-cta: linear-gradient(135deg, #7C2D12 0%, #0D1626 60%, #1A273D 100%);
+  --grad-text: linear-gradient(135deg, #EA580C 0%, #F59E0B 100%);
 
   /* ── Typography ── */
   --ff-heading: 'Plus Jakarta Sans', sans-serif;
@@ -101,7 +101,7 @@
   --shadow-md: 0 4px 14px rgba(13, 22, 38, 0.07);
   --shadow-lg: 0 14px 36px rgba(13, 22, 38, 0.09);
   --shadow-xl: 0 24px 56px rgba(13, 22, 38, 0.12);
-  --shadow-glow: 0 0 40px rgba(13, 159, 110, 0.18);
+  --shadow-glow: 0 0 40px rgba(234, 88, 12, 0.18);
   --shadow-card: 0 1px 3px rgba(13, 22, 38, 0.03), 0 8px 20px rgba(13, 22, 38, 0.05);
   --shadow-card-hover: 0 6px 12px rgba(13, 22, 38, 0.06), 0 16px 38px rgba(13, 22, 38, 0.11);
 
