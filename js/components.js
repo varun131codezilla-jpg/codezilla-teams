@@ -6,37 +6,37 @@
 const NAVBAR_HTML = `
 <nav class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">
+    <a href="/" class="navbar__logo">
       <img class="logo-mark-img" src="assets/images/logo.svg" alt="CT Logo">
       <span class="logo-text">Codezilla <span>Teams</span></span>
     </a>
     <ul class="navbar__links">
-      <li><a href="services.html" data-page="services.html">Services</a></li>
-      <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
-      <li><a href="how-it-works.html" data-page="how-it-works.html">How It Works</a></li>
-      <li><a href="about.html" data-page="about.html">About Us</a></li>
-      <li><a href="industries.html" data-page="industries.html">Industries</a></li>
-      <li><a href="compliance-playbook.html" data-page="compliance-playbook.html">Playbook</a></li>
-      <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
+      <li><a href="/services" data-page="/services">Services</a></li>
+      <li><a href="/pricing" data-page="/pricing">Pricing</a></li>
+      <li><a href="/how-it-works" data-page="/how-it-works">How It Works</a></li>
+      <li><a href="/about" data-page="/about">About Us</a></li>
+      <li><a href="/industries" data-page="/industries">Industries</a></li>
+      <li><a href="/compliance-playbook" data-page="/compliance-playbook">Playbook</a></li>
+      <li><a href="/faq" data-page="/faq">FAQ</a></li>
     </ul>
     <div class="navbar__actions">
-      <a href="contact.html" class="btn btn--secondary btn--sm navbar__expert-btn">Talk to an Expert</a>
-      <a href="contact.html" class="btn btn--primary btn--sm">Book Consultation <i data-lucide="arrow-right"></i></a>
+      <a href="/contact" class="btn btn--secondary btn--sm navbar__expert-btn">Talk to an Expert</a>
+      <a href="/contact" class="btn btn--primary btn--sm">Book Consultation <i data-lucide="arrow-right"></i></a>
     </div>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="navbar__mobile" id="nav-mobile">
-    <a href="index.html" data-page="index.html">Home</a>
-    <a href="services.html" data-page="services.html">Services</a>
-    <a href="pricing.html" data-page="pricing.html">Pricing</a>
-    <a href="how-it-works.html" data-page="how-it-works.html">How It Works</a>
-    <a href="about.html" data-page="about.html">About Us</a>
-    <a href="industries.html" data-page="industries.html">Industries</a>
-    <a href="compliance-playbook.html" data-page="compliance-playbook.html">Playbook</a>
-    <a href="faq.html" data-page="faq.html">FAQ</a>
-    <a href="contact.html" class="btn btn--primary">Book Consultation</a>
+    <a href="/" data-page="/">Home</a>
+    <a href="/services" data-page="/services">Services</a>
+    <a href="/pricing" data-page="/pricing">Pricing</a>
+    <a href="/how-it-works" data-page="/how-it-works">How It Works</a>
+    <a href="/about" data-page="/about">About Us</a>
+    <a href="/industries" data-page="/industries">Industries</a>
+    <a href="/compliance-playbook" data-page="/compliance-playbook">Playbook</a>
+    <a href="/faq" data-page="/faq">FAQ</a>
+    <a href="/contact" class="btn btn--primary">Book Consultation</a>
   </div>
 </nav>
 `;
@@ -54,7 +54,7 @@ const FOOTER_HTML = `
 
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="navbar__logo">
+        <a href="/" class="navbar__logo">
           <img class="logo-mark-img" src="assets/images/logo.svg" alt="CT Logo">
           <span class="logo-text">Codezilla <span>Teams</span></span>
         </a>
@@ -82,7 +82,7 @@ const FOOTER_HTML = `
           <li><a href="services.html#recruitment">Recruitment Concierge</a></li>
           <li><a href="services.html#payroll">Payroll & Tax (TDS) Management</a></li>
           <li><a href="services.html#compliance">Statutory Compliance (EPFO/ESIC)</a></li>
-          <li><a href="pricing.html">Transparent Pricing</a></li>
+          <li><a href="/pricing">Transparent Pricing</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -91,10 +91,10 @@ const FOOTER_HTML = `
           <li><a href="about.html#leadership">Indore HQ & Executive Leadership</a></li>
           <li><a href="about.html#compliance">100% Legal & Liability Protection</a></li>
           <li><a href="how-it-works.html#agency-vs-eor">Agency vs. True EOR Comparison</a></li>
-          <li><a href="how-it-works.html">3-Day Rapid Onboarding</a></li>
+          <li><a href="/how-it-works">3-Day Rapid Onboarding</a></li>
           <li><a href="services.html#transition">$0 Subsidiary Transition Guarantee</a></li>
-          <li><a href="compliance-playbook.html">EOR Compliance Playbook</a></li>
-          <li><a href="faq.html">Frequently Asked Questions</a></li>
+          <li><a href="/compliance-playbook">EOR Compliance Playbook</a></li>
+          <li><a href="/faq">Frequently Asked Questions</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -144,10 +144,10 @@ function injectComponents() {
   }
 
   // Highlight active page
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname === '/' ? '/' : '/' + window.location.pathname.split('/').pop().replace('.html', '');
   document.querySelectorAll(`.navbar__links a, .navbar__mobile a`).forEach(link => {
     const page = link.getAttribute('data-page');
-    if (page === currentPath || (currentPath === '' && page === 'index.html')) {
+    if (page === currentPath || (currentPath === '/' && page === '/')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');

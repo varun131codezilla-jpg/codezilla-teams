@@ -1,0 +1,23 @@
+# Codezilla Teams
+
+Codezilla Teams is an Employer of Record (EOR) and Contractor of Record service that lets foreign companies (US/UK/EU) legally hire employees in India without setting up an Indian subsidiary. Codezilla Global Technologies Pvt. Ltd. becomes the legal employer, handling payroll, TDS, PF/ESIC, statutory compliance, and labor liability, while the client company retains day-to-day management of the employee.
+
+## Key Facts
+- Flat pricing: -/employee/month for EOR, /month for Contractor of Record.
+- Zero setup fees.
+-  subsidiary transition fee.
+- Onboarding completed in 3 business days.
+- ISO/IEC 27001:2022 Certified.
+- SOC 2 Type II Compliant.
+- 100% Indian Labor Compliant (EPFO, ESIC, TDS, labor laws).
+- Headquartered in Indore (MP, India) with a London (UK) office.
+
+## Links
+- [Home](https://codezilla-teams.vercel.app/)
+- [Services](https://codezilla-teams.vercel.app/services)
+- [Pricing](https://codezilla-teams.vercel.app/pricing)
+- [How it Works](https://codezilla-teams.vercel.app/how-it-works)
+- [About Us](https://codezilla-teams.vercel.app/about)
+- [Industries](https://codezilla-teams.vercel.app/industries)
+- [Compliance Playbook](https://codezilla-teams.vercel.app/compliance-playbook)
+- [Contact](https://codezilla-teams.vercel.app/contact)
