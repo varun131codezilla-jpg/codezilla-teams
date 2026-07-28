@@ -1,5 +1,5 @@
 /* ============================================
-   MAIN.JS — Codezilla Teams
+   MAIN.JS - Codezilla Teams
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
