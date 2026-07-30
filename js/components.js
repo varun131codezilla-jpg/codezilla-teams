@@ -46,8 +46,8 @@ const FOOTER_HTML = `
   <div class="container">
     <!-- Footer Trust & Certifications Bar -->
     <div class="footer__trust-bar">
-      <div class="footer__trust-item"><i data-lucide="shield-check"></i> ISO/IEC 27001:2022 Certified</div>
-      <div class="footer__trust-item"><i data-lucide="lock"></i> SOC 2 Type II Compliant</div>
+      <div class="footer__trust-item"><i data-lucide="shield-check"></i> Ironclad IP Protection</div>
+      <div class="footer__trust-item"><i data-lucide="lock"></i> Strict Data Security</div>
       <div class="footer__trust-item"><i data-lucide="file-check-2"></i> GDPR &amp; DPDPA 2023 DPA</div>
       <div class="footer__trust-item"><i data-lucide="shield"></i> 100% Indian Labor Compliant</div>
     </div>
