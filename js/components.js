@@ -15,7 +15,7 @@ const NAVBAR_HTML = `
       <li><a href="/pricing" data-page="/pricing">Pricing</a></li>
       <li><a href="/how-it-works" data-page="/how-it-works">How It Works</a></li>
       <li><a href="/about" data-page="/about">About Us</a></li>
-      <li><a href="/departments" data-page="/departments">Departments</a></li>
+      <li><a href="/functions" data-page="/functions">Functions</a></li>
       <li><a href="/compliance-playbook" data-page="/compliance-playbook">Playbook</a></li>
       <li><a href="/faq" data-page="/faq">FAQ</a></li>
     </ul>
@@ -33,7 +33,7 @@ const NAVBAR_HTML = `
     <a href="/pricing" data-page="/pricing">Pricing</a>
     <a href="/how-it-works" data-page="/how-it-works">How It Works</a>
     <a href="/about" data-page="/about">About Us</a>
-    <a href="/departments" data-page="/departments">Departments</a>
+    <a href="/functions" data-page="/functions">Functions</a>
     <a href="/compliance-playbook" data-page="/compliance-playbook">Playbook</a>
     <a href="/faq" data-page="/faq">FAQ</a>
     <a href="/contact" class="btn btn--primary">Book Consultation</a>
@@ -98,14 +98,14 @@ const FOOTER_HTML = `
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Supported Departments</h4>
+        <h4>Supported Functions</h4>
         <ul>
-          <li><a href="departments.html#engineering">Engineering & Product</a></li>
-          <li><a href="departments.html#it-support">IT Support & Helpdesk</a></li>
-          <li><a href="departments.html#operations">Operations & Back-office</a></li>
-          <li><a href="departments.html#revops">RevOps & Sales Ops</a></li>
-          <li><a href="departments.html#finance">Finance & Accounting</a></li>
-          <li><a href="departments.html#hr">HR & Talent Acquisition</a></li>
+          <li><a href="functions.html#engineering">Engineering & Product</a></li>
+          <li><a href="functions.html#it-support">IT Support & Helpdesk</a></li>
+          <li><a href="functions.html#operations">Operations & Back-office</a></li>
+          <li><a href="functions.html#revops">RevOps & Sales Ops</a></li>
+          <li><a href="functions.html#finance">Finance & Accounting</a></li>
+          <li><a href="functions.html#hr">HR & Talent Acquisition</a></li>
         </ul>
       </div>
     </div>
